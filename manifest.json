@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "COP - Detran",
+  "description": "Pega do COP e faz a busca da placa no Detran-RN",
+  "version": "0.1",
+  "permissions": [
+    "activeTab"
+  ],
+
+  "background": {
+    "scripts": [
+      "post.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "Detran.html"
+  },
+
+  "content_scripts": [
+    {
+      "js": [
+        "jquery-3.4.1.min.js",
+        "post.js"]
+    }
+  ]
+}

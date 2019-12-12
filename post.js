@@ -25,7 +25,7 @@
             // Retorno do Ajax
             // console.log(data);
             //alert(data);
-            // var myWindow = window.open("http://www2.detran.rn.gov.br/servicos/consultaveiculo.asp", "_blank");
+            var myWindow = window.open("http://www2.detran.rn.gov.br/servicos/consultaveiculo.asp", "_blank");
             myWindow.document.write(data);
         }
     }

@@ -1,21 +1,21 @@
 {
   "manifest_version": 2,
-  "name": "COP - Detran",
-  "description": "Pega do COP e faz a busca da placa no Detran-RN",
+  "name": "SICOP",
+  "description": "Pega do SICOP e faz a busca da placa no Detran-RN",
   "version": "0.1",
-  "permissions": [
-    "activeTab"
-	],
-	"content_scripts": [
-		{
-			"matches": ["*://*.br/*"],
-			"js": ["post.js"]
-		}
-	],
+  "permissions": ["activeTab"],
+  "content_scripts": [
+	{
+		"matches": [ "<all_urls>" ],
+		"js": ["jquery-3.4.1.min.js", "content.js"]            
+	}
+  ],
 	
-	"browser_action": {
- 		"default_icon": "carro.png",
- 		"default_popup": "Detran.html",
- 		"default_title": "Detran-RN"
+  "browser_action": {
+ 	"default_icon": "carro.png"
+  },
+	
+	"background": {
+		"scripts": ["background.js"]
 	}
 }

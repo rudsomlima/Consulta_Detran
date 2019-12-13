@@ -3,13 +3,18 @@
   "name": "SICOP",
   "description": "Pega do SICOP e faz a busca da placa no Detran-RN",
   "version": "0.1",
-  "permissions": ["activeTab"],
+
   "content_scripts": [
 	{
 		"matches": [ "<all_urls>" ],
         "all_frames": true,
-		"js": ["jquery-3.4.1.min.js", "content.js"]            
-	}
+		"js": ["jquery-3.4.1.min.js", "content.js"]
+	},
+    {
+      "matches": [ "http://www2.detran.rn.gov.br/servicos/*" ],
+      "all_frames": true,
+      "js": ["jquery-3.4.1.min.js", "consulta.js"]
+    }
   ],
 	
   "browser_action": {

@@ -8,15 +8,4 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     });
 });
 
-chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-        if( request.message === "open_new_tab" ) {
-            chrome.tabs.create({"url": request.url});
-            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-                var activeTab = tabs[0];
-                console.log("consulta");
-                chrome.tabs.executeScript(null,{file: "consulta.js"});
-            });
-        }
-    }
-);
+

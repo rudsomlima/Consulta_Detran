@@ -7,11 +7,10 @@
   "content_scripts": [
 	{
 		"matches": [ "<all_urls>" ],
-        "all_frames": true,
 		"js": ["jquery-3.4.1.min.js", "content.js"]
 	},
     {
-      "matches": [ "http://www2.detran.rn.gov.br/servicos/*" ],
+      "matches": [ "http://www2.detran.rn.gov.br/*" ],
       "all_frames": true,
       "js": ["jquery-3.4.1.min.js", "consulta.js"]
     }

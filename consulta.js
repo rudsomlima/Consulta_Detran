@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(
         if( request.message === "consulta" ) {
             var placa = request.placa;
             var renavam = request.renavam;
-            alert(placa + "\n" + renavam);
+            // alert(placa + "\n" + renavam);
             console.log(placa);
             console.log(renavam);
             $("#placa").val(placa);
